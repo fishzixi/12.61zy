@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>111</div>
+    <img src="" alt=""> 
+    <script>    
+        var date = new Date();
+        var h = date.getHours();
+        console.log(h);
+        var divEle = document.getElementsByTagName('div')[0];
+        var imgEle = document.getElementsByTagName('img')[0];
+        if(6<=h&&h<12){
+            divEle.innerText="上午好";
+            imgEle.setAttribute('src','./images/zao.webp');
+        }else if (12<=h&&h<18){
+            divEle.innerText="下午好";
+            imgEle.setAttribute('src','./images/xia.webp');
+        }else if (18<=h&&h<24){
+            divEle.innerText="晚上好";
+            imgEle.setAttribute('src','./images/wan.webp');
+        }else{
+            divEle.innerText="现在是凌晨回去睡觉";
+        }
+
+    </script>
+</body>
+
+</html>

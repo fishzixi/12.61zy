@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    span {
+        display: none;
+    }
+   </style>
+</head>
+<body>
+    <div class="all">
+        <label>设置密码：<input type="text" onblur="f1()"></label>
+        <span>请输入6~16位数字</span>
+        <img src="" alt="">
+    </div>
+    <script>
+        // var all = document.getElementsByClassName('all');
+        // console.log(all);
+        function f1(){
+            var input = document.querySelector("input");
+            var img = document.querySelector('img');
+            var span = document.querySelector('span');
+            // console.log(all);
+            console.log(span);
+            if(input.value.length<6||input.value.length>10){
+                img.src="./images/wrong.png";
+                span.setAttribute("style","display:block");
+            }else{
+                img.src="./images/right.png";
+                // span.setAttribute("style","display:block");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fork{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #ccc;
+            float: left;
+        }
+
+        #image {
+            width: 160px;
+            height: 250px;
+            border: 1px solid #ccc;
+            float: left;
+            padding: 0 15px;
+            display: block;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="fork" onclick="f1()">X</div>
+    <div id="image">
+        <h2>手机淘宝</h2>
+        <img src="./images/tao.png" alt="">
+    </div>
+    
+    <script>
+        function f1(){
+            let image = document.querySelector("#image");
+            // let div = document.getElementById("fork");
+            image.setAttribute("style","display:none");
+        }
+    </script>
+
+
+</body>
+</html>

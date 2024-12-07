@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .all{
+            
+            width: 360px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .shell{
+            width: 80px;
+            height: 100px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .spirit{
+            margin: 15px auto;
+            width: 44px;
+            height: 44px;
+            background-image: url(./images/sprite.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="all"></div>
+    <script>
+        var all = document.querySelector(".all");
+        var text = ["手机","旅行","车险","游戏","彩票","电影","酒店","理财"]
+        var arr=[];
+        for(i=0;i<8;i++){
+        arr.push('<div class="shell"><div class="spirit" style="background-position:0 '+(-80*i)+'px"></div><p>'+text[i]+'</p></div>');
+        }
+        all.innerHTML=arr.join('');
+
+    </script>
+</body>
+</html>

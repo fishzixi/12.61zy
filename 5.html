@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" checked>
+        <input type="checkbox" checked>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+    </form>
+    <button id="all" onclick="choice1()">全选</button>
+    <button id="allno" onclick="choice2()">全不选</button>
+    <button id="reverse" onclick="choice3()">反选</button>
+    <script>
+        var input = document.querySelectorAll('input');
+        console.log(input);
+        var all = document.querySelector("#all");
+        var id = document.getElementById("allno");
+        var reverse = document.querySelector("#reverse");
+
+        function choice1(){
+            for(i=0;i<input.length;i++){
+                input[i].checked=true;
+            }
+        }
+
+        function choice2(){
+            for(i=0;i<input.length;i++){
+                input[i].checked=false;
+            }
+        }
+
+        function choice3(){
+            for(i=0;i<input.length;i++){
+                if(input[i].checked===true){
+                    input[i].checked=false;
+                }else{
+                    input[i].checked=true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
